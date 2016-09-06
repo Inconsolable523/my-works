@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>Drop-Down Menu</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+
+<!-- dd menu -->
+<script type="text/javascript">
+function mopen(a){
+	var par=document.getElementById(a);
+	par.style.display="block";
+}
+function mclosetime(a){
+	var par=document.getElementById(a);
+	par.style.display="none";
+}
+</script>
+
+
+</head>
+<body>
+
+<h1>DropDown Menu</h1>
+
+<p>This menu can be located anywhere on a page:</p>
+
+<ul id="sddm">
+	<li><a href="#" onmouseover="mopen('m1')" onmouseout="mclosetime('m1')">Home</a>
+		<div id="m1"  onmouseover="mopen('m1')" onmouseout="mclosetime('m1')">
+		<a href="#" >HTML DropDown</a>
+		<a href="#">DHTML DropDown menu</a>
+		<a href="#">JavaScript DropDown</a>
+		<a href="#">DropDown Menu</a>
+		<a href="#">CSS DropDown</a>
+		</div>
+	</li>
+	<li><a href="#" onmouseover="mopen('m2')" onmouseout="mclosetime('m2')">Download</a>
+		<div id="m2" onmouseover="mopen('m2')" onmouseout="mclosetime('m2')"">
+		<a href="#">ASP Dropdown</a>
+		<a href="#">Pulldown menu</a>
+		<a href="#">AJAX dropdown</a>
+		<a href="#">DIV dropdown</a>
+		</div>
+	</li>
+	<li><a href="#" onmouseover="mopen('m3')" onmouseout="mclosetime('m3')">Order</a>
+		<div id="m3" onmouseover="mopen('m3')" onmouseout="mclosetime('m3')"">
+		<a href="#">Visa Credit Card</a>
+		<a href="#">Paypal</a>
+		</div>
+	</li>
+	<li><a href="#" onmouseover="mopen('m4')" onmouseout="mclosetime('m4')">Help</a>
+		<div id="m4" onmouseover="mopen('m4')" onmouseout="mclosetime('m4')"">
+		<a href="#">Download Help File</a>
+		<a href="#">Read online</a>
+		</div>
+	</li>
+	<li><a href="#" onmouseover="mopen('m5')" onmouseout="mclosetime('m5')">Contact</a>
+		<div id="m5" onmouseover="mopen('m5')" onmouseout="mclosetime('m5')">
+		<a href="#">E-mail</a>
+		<a href="#">Submit Request Form</a>
+		<a href="#">Call Center</a>
+		</div>
+	</li>
+</ul>
+<div style="clear:both"></div>
+
+<div style="clear:both"></div>
+
+
+</body>
+</html>

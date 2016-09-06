@@ -1,0 +1,43 @@
+
+.m0{
+	width: 250px;
+	border:1px solid #9CA5AD;
+	margin:40px auto;
+}
+h1{
+	background: #CACED1;
+	margin:0 ;
+	padding-left:15px;
+	height: 25px;
+	line-height: 25px;
+	border:1px solid #F0F2F5;
+	font-size: 20px;
+
+}
+img{
+	float: left;
+	margin-left:230px;
+	margin-top: -15px; 
+}
+ul{
+	margin:0;
+	padding: 0;
+	list-style: none;
+	padding-left:-10px;
+	font-size: 15px;
+	background: #E4E9EE;
+}
+li{
+	height: 25px;
+	line-height: 25px;
+}
+a{
+	padding-left: 15px;
+	text-decoration: none;
+	display: block;
+	cursor: pointer;
+	color: #5B666C;
+}
+a:hover{
+	background: white;
+}
