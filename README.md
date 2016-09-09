@@ -6,6 +6,8 @@
 
 [静态页面2](http://zhichaoblog.com/my-works/静态页面2/Try.html)
 
+[静态页面3](http://zhichaoblog.com/my-works/静态页面3/neteasy.html)
+
 ## JS
 [播放列表收缩展开](http://zhichaoblog.com/my-works/播放列表收缩展开/play-list.html)
 

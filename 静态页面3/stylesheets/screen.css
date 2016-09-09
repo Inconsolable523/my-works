@@ -1,0 +1,467 @@
+@charset "UTF-8";
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 7, ../sass/screen.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 11, ../sass/screen.scss */
+body {
+  width: 1616px;
+  margin: 0 auto;
+  list-style: none;
+}
+
+/* line 17, ../sass/screen.scss */
+.header-search {
+  height: 36px;
+  line-height: 36px;
+  font-size: 12px;
+  font-family: "华文仿宋",serif,sans-serif;
+  background: #F0F0F0;
+}
+/* line 23, ../sass/screen.scss */
+.header-search-adver {
+  margin-left: 206px;
+}
+/* line 26, ../sass/screen.scss */
+.header-search a {
+  margin-left: 14px;
+  color: #4EAB46;
+  margin-right: 670px;
+  text-decoration: none;
+}
+
+/* line 34, ../sass/screen.scss */
+.nav {
+  height: 88px;
+  line-height: 88px;
+  font-family: "ヒラギノ角ゴ 簡体中文",serif,sans-serif;
+}
+/* line 38, ../sass/screen.scss */
+.nav ul {
+  list-style: none;
+  float: right;
+}
+/* line 42, ../sass/screen.scss */
+.nav li {
+  float: left;
+}
+/* line 45, ../sass/screen.scss */
+.nav-care {
+  text-decoration: none;
+  width: 54px;
+  height: 22px;
+  line-height: 22px;
+  background: #4EAB46;
+  color: white;
+  margin-right: 14px;
+}
+
+/* line 55, ../sass/screen.scss */
+.header-banner {
+  overflow: hidden;
+}
+/* line 57, ../sass/screen.scss */
+.header-banner ul {
+  width: 4956px;
+}
+/* line 61, ../sass/screen.scss */
+.header-banner li {
+  float: left;
+}
+
+/* line 65, ../sass/screen.scss */
+.header-class {
+  height: 296px;
+  position: relative;
+  font-size: 14px;
+  font-family: "华文仿宋",serif,sans-serif;
+  line-height: 25px;
+  color: #B8B8B8;
+  letter-spacing: 2px;
+}
+/* line 73, ../sass/screen.scss */
+.header-class_neteasy {
+  width: 270px;
+  position: absolute;
+  left: 290px;
+  top: 62px;
+}
+/* line 78, ../sass/screen.scss */
+.header-class_neteasy h1 {
+  font-family: "MicrosoftYaHei",serif,sans-serif;
+  font-size: 22px;
+  color: #2A2A2A;
+  margin-left: 20px;
+}
+/* line 84, ../sass/screen.scss */
+.header-class_neteasy p {
+  margin-bottom: 21px;
+}
+/* line 87, ../sass/screen.scss */
+.header-class_neteasy img {
+  position: absolute;
+  left: -84px;
+  top: 12px;
+}
+/* line 92, ../sass/screen.scss */
+.header-class_neteasy a {
+  color: #4EAB46;
+  text-decoration: none;
+}
+/* line 97, ../sass/screen.scss */
+.header-class_cloud {
+  width: 245px;
+  position: absolute;
+  left: 733px;
+  top: 62px;
+}
+/* line 102, ../sass/screen.scss */
+.header-class_cloud h1 {
+  font-family: "MicrosoftYaHei",serif,sans-serif;
+  font-size: 22px;
+  color: #2A2A2A;
+  margin-left: 20px;
+}
+/* line 108, ../sass/screen.scss */
+.header-class_cloud p {
+  margin-bottom: 21px;
+}
+/* line 111, ../sass/screen.scss */
+.header-class_cloud img {
+  position: absolute;
+  left: -100px;
+  top: 12px;
+}
+/* line 116, ../sass/screen.scss */
+.header-class_cloud a {
+  color: #4EAB46;
+  text-decoration: none;
+}
+/* line 121, ../sass/screen.scss */
+.header-class_Mooc {
+  width: 278px;
+  position: absolute;
+  left: 1139px;
+  top: 62px;
+}
+/* line 126, ../sass/screen.scss */
+.header-class_Mooc h1 {
+  font-family: "MicrosoftYaHei",serif,sans-serif;
+  font-size: 22px;
+  color: #2A2A2A;
+  margin-left: 20px;
+}
+/* line 132, ../sass/screen.scss */
+.header-class_Mooc p {
+  margin-bottom: 21px;
+}
+/* line 135, ../sass/screen.scss */
+.header-class_Mooc img {
+  position: absolute;
+  left: -84px;
+  top: 12px;
+}
+/* line 140, ../sass/screen.scss */
+.header-class_Mooc a {
+  color: #4EAB46;
+  text-decoration: none;
+}
+
+/* line 146, ../sass/screen.scss */
+.header-picture {
+  height: 220px;
+}
+
+/* line 149, ../sass/screen.scss */
+.middle {
+  background: #F6F6F6;
+}
+
+/* line 152, ../sass/screen.scss */
+.main {
+  height: 1552px;
+  width: 1207px;
+  padding-top: 84px;
+  margin: 0 auto;
+  position: relative;
+}
+/* line 158, ../sass/screen.scss */
+.main-left {
+  width: 980px;
+}
+/* line 161, ../sass/screen.scss */
+.main-left_change .checked {
+  background: #4EAB46;
+  color: white;
+}
+/* line 165, ../sass/screen.scss */
+.main-left_change a {
+  display: inline-block;
+  width: 200px;
+  height: 48px;
+  font-size: 20px;
+  font-family: "华文仿宋",serif,sans-serif;
+  text-decoration: none;
+  background: #FFFFFF;
+  text-align: center;
+  margin-right: -4px;
+  color: #575757;
+}
+/* line 176, ../sass/screen.scss */
+.main-left_change a span {
+  line-height: 48px;
+}
+/* line 179, ../sass/screen.scss */
+.main-left_change a:hover {
+  background: #4EAB46;
+  color: white;
+}
+/* line 185, ../sass/screen.scss */
+.main-left_class {
+  margin-top: 28px;
+}
+/* line 187, ../sass/screen.scss */
+.main-left_class dl {
+  line-height: 22px;
+  width: 222px;
+  height: 228px;
+  float: left;
+  background: white;
+  margin-right: 22px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  font-family: "MicrosoftYaHei",serif,sans-serif;
+}
+/* line 197, ../sass/screen.scss */
+.main-left_class dl dt {
+  height: 125px;
+}
+/* line 200, ../sass/screen.scss */
+.main-left_class dl dd {
+  height: 104px;
+  margin: 6px 10px 0 10px;
+  background: url(../images/number.png) no-repeat 0 48px;
+}
+/* line 204, ../sass/screen.scss */
+.main-left_class dl dd a {
+  display: inline-block;
+  width: 210px;
+  text-decoration: none;
+}
+/* line 208, ../sass/screen.scss */
+.main-left_class dl dd a:hover {
+  color: #78B672;
+}
+/* line 212, ../sass/screen.scss */
+.main-left_class dl dd span {
+  display: block;
+  color: #9F9F9F;
+}
+/* line 216, ../sass/screen.scss */
+.main-left_class dl dd .checked {
+  color: red;
+  margin-top: 28px;
+}
+/* line 224, ../sass/screen.scss */
+.main-left_class--list {
+  margin-left: 656px;
+}
+/* line 226, ../sass/screen.scss */
+.main-left_class--list a {
+  display: inline-block;
+  text-align: center;
+  line-height: 20px;
+  width: 20px;
+  height: 20px;
+  text-decoration: none;
+  margin-right: 5px;
+  color: black;
+}
+/* line 235, ../sass/screen.scss */
+.main-left_class--list a:hover {
+  background: #8DD2A1;
+  color: white;
+}
+/* line 242, ../sass/screen.scss */
+.main-right {
+  position: absolute;
+  left: 980px;
+  top: 84px;
+  width: 226px;
+}
+/* line 247, ../sass/screen.scss */
+.main-right_organizition {
+  background: white;
+  height: 230px;
+}
+/* line 250, ../sass/screen.scss */
+.main-right_organizition h1 {
+  padding-left: 18px;
+  height: 54px;
+  line-height: 54px;
+  font-size: 16px;
+}
+/* line 256, ../sass/screen.scss */
+.main-right_organizition div {
+  border-top: 1px solid #E0E0E0;
+}
+/* line 259, ../sass/screen.scss */
+.main-right_organizition p {
+  padding-left: 18px;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #9B9B9B;
+}
+/* line 265, ../sass/screen.scss */
+.main-right_organizition a {
+  display: inline-block;
+  width: 202px;
+  height: 110px;
+  margin-top: 10px;
+  background: url(../images/vidio.png) no-repeat 18px 0;
+}
+/* line 271, ../sass/screen.scss */
+.main-right_organizition a img {
+  margin-left: 82px;
+  margin-top: 30px;
+}
+/* line 277, ../sass/screen.scss */
+.main-right_hot {
+  height: 778px;
+  background: white;
+  margin-top: 20px;
+}
+/* line 281, ../sass/screen.scss */
+.main-right_hot h1 {
+  padding-left: 18px;
+  height: 56px;
+  border-bottom: 1px solid #E0E0E0;
+  font-size: 16px;
+  line-height: 56px;
+}
+/* line 288, ../sass/screen.scss */
+.main-right_hot ul {
+  list-style: none;
+  font-size: 14px;
+  color: #3B3B3B;
+  border-top: 1px solid #E0E0E0;
+}
+/* line 293, ../sass/screen.scss */
+.main-right_hot ul li {
+  margin-top: 20px;
+  padding-left: 18px;
+  height: 50px;
+  position: relative;
+  background: url(../images/people.png) no-repeat 84px 26px;
+}
+/* line 299, ../sass/screen.scss */
+.main-right_hot ul li a {
+  text-decoration: none;
+  font-size: 14px;
+  color: black;
+  position: absolute;
+  left: 84px;
+}
+/* line 306, ../sass/screen.scss */
+.main-right_hot ul li span {
+  position: absolute;
+  left: 98px;
+  top: 26px;
+  color: #9D9D9D;
+  font-size: 14px;
+}
+
+/* line 320, ../sass/screen.scss */
+.footer {
+  position: relative;
+  height: 262px;
+  background: #21262B;
+}
+/* line 324, ../sass/screen.scss */
+.footer-address {
+  margin-left: 256px;
+  padding-top: 94px;
+}
+/* line 327, ../sass/screen.scss */
+.footer-address h1 {
+  color: #439326;
+  font-size: 22px;
+  margin-bottom: 28px;
+}
+/* line 332, ../sass/screen.scss */
+.footer-address span {
+  font-size: 12px;
+  color: #A0A3A4;
+}
+/* line 337, ../sass/screen.scss */
+.footer-link {
+  position: absolute;
+  left: 800px;
+  top: 82px;
+  color: #A0A3A4;
+  font-size: 12px;
+}
+/* line 343, ../sass/screen.scss */
+.footer-link h4 {
+  margin-bottom: 16px;
+}
+/* line 346, ../sass/screen.scss */
+.footer-link a {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 16px;
+  text-decoration: none;
+  color: #A0A3A4;
+}
+/* line 354, ../sass/screen.scss */
+.footer-us {
+  position: absolute;
+  left: 1008px;
+  top: 82px;
+  color: #A0A3A4;
+  font-size: 12px;
+  width: 70px;
+}
+/* line 361, ../sass/screen.scss */
+.footer-us h4 {
+  margin-bottom: 16px;
+}
+/* line 364, ../sass/screen.scss */
+.footer-us a {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 16px;
+  text-decoration: none;
+  color: #A0A3A4;
+}
+/* line 371, ../sass/screen.scss */
+.footer-us .care {
+  background: url(../images/weibo.png) no-repeat 40px 0;
+  height: 20px;
+}
+/* line 376, ../sass/screen.scss */
+.footer-more {
+  left: 1142px;
+  position: absolute;
+  top: 82px;
+  color: #A0A3A4;
+  font-size: 12px;
+}
+/* line 382, ../sass/screen.scss */
+.footer-more h4 {
+  margin-bottom: 16px;
+}
+/* line 385, ../sass/screen.scss */
+.footer-more a {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 16px;
+  text-decoration: none;
+  color: #A0A3A4;
+}

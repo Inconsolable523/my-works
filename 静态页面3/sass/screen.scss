@@ -1,0 +1,393 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+// @import "Compass/reset"
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	width: 1616px;
+	margin:0 auto;
+	list-style:none;
+}
+.header{
+	&-search{
+			height:36px;
+			line-height: 36px;
+			font-size:12px;
+			font-family: "华文仿宋",serif,sans-serif;
+			background: #F0F0F0;
+			&-adver{
+				margin-left:206px;
+			}
+			a{
+				margin-left:14px;
+				color: #4EAB46;
+				margin-right:670px;
+				text-decoration:none;
+			}
+		}
+	}
+.nav{
+	height:88px;
+	line-height:88px;
+	font-family:"ヒラギノ角ゴ 簡体中文",serif,sans-serif;
+	ul{
+		list-style: none;
+		float: right;
+	}
+	li{
+		float: left;
+	}
+	&-care{
+		text-decoration: none;
+		width: 54px;
+		height: 22px;
+		line-height: 22px;
+		background: #4EAB46;
+		color: white;
+		margin-right:14px;
+	}
+}
+.header-banner{
+	overflow:hidden;
+	ul{
+		width: 4956px;
+
+	}
+	li{
+		float: left;
+	}
+}
+.header-class{
+	height:296px;
+	position:relative;
+	font-size: 14px;
+	font-family: "华文仿宋",serif,sans-serif;
+	line-height: 25px;
+	color: #B8B8B8;
+	letter-spacing:2px;
+	&_neteasy{
+		width: 270px;
+		position:absolute;
+		left: 290px;
+		top:62px;
+		h1{
+			font-family: "MicrosoftYaHei",serif,sans-serif;
+			font-size: 22px;
+			color: #2A2A2A;
+			margin-left:20px;
+		}
+		p{
+			margin-bottom: 21px;
+		}
+		img{
+			position:absolute;
+			left: -84px;
+			top: 12px;
+		}
+		a{
+			color: #4EAB46;
+			text-decoration: none;
+		}
+	}
+	&_cloud{
+		width: 245px;
+		position:absolute;
+		left:733px; 
+		top: 62px;
+		h1{
+			font-family: "MicrosoftYaHei",serif,sans-serif;
+			font-size: 22px;
+			color: #2A2A2A;
+			margin-left:20px;
+		}
+		p{
+			margin-bottom: 21px;
+		}
+		img{
+			position:absolute;
+			left: -100px;
+			top: 12px;
+		}
+		a{
+			color: #4EAB46;
+			text-decoration: none;
+		}
+	}
+	&_Mooc{
+		width: 278px;
+		position:absolute;
+		left: 1139px;
+		top: 62px;
+		h1{
+			font-family: "MicrosoftYaHei",serif,sans-serif;
+			font-size: 22px;
+			color: #2A2A2A;
+			margin-left:20px;
+		}
+		p{
+			margin-bottom: 21px;
+		}
+		img{
+			position:absolute;
+			left: -84px;
+			top: 12px;
+		}
+		a{
+			color: #4EAB46;
+			text-decoration: none;
+		}
+	}
+}
+.header-picture{
+	height:220px;
+}
+.middle{
+      background:#F6F6F6;
+}
+.main{
+	height:1552px;
+	width:1207px;
+	padding-top:84px;
+	margin: 0 auto;
+	position:relative;
+	&-left{
+		width: 980px;
+		&_change{
+			.checked{
+				background: #4EAB46;
+				color: white;
+			}
+			a{
+			display: inline-block;
+			width: 200px;
+			height: 48px;
+			font-size: 20px;
+			font-family: "华文仿宋",serif,sans-serif;
+			text-decoration: none;
+			background:#FFFFFF;
+			text-align: center;
+			margin-right:-4px;
+			color: #575757;
+			span{
+				line-height: 48px;
+			}
+			&:hover{
+				background: #4EAB46;
+				color: white;
+			}
+		}
+		}
+		&_class{
+			margin-top:28px;
+			dl{
+				line-height: 22px;
+				width: 222px;
+				height: 228px;
+				float: left;
+				background:white;
+				margin-right: 22px;
+				margin-bottom: 20px;
+				font-size:12px; 
+				font-family: "MicrosoftYaHei",serif,sans-serif;
+				dt{
+					height: 125px;
+				}
+				dd{
+					height: 104px;
+					margin: 6px 10px 0 10px;
+					background:url(../images/number.png) no-repeat 0 48px;
+					a{
+						display: inline-block;
+						width: 210px;
+						text-decoration:none;
+						&:hover{
+							color: #78B672;
+						}
+					}
+					span{
+						display: block;
+						color: #9F9F9F;
+					}
+					.checked{
+						color: red;
+						margin-top:28px;
+					}
+					
+				}
+			}
+		}
+		&_class--list{
+			margin-left:656px;
+			a{
+				display: inline-block;
+				text-align: center;
+				line-height: 20px;
+				width: 20px;
+				height: 20px;
+				text-decoration: none;
+				margin-right:5px;
+				color: black;
+				&:hover{
+					background: #8DD2A1;
+					color: white;
+				}
+			}
+		}
+	}
+	&-right{
+		position:absolute;
+		left: 980px;
+		top: 84px;
+		width: 226px;
+		&_organizition{
+			background:white;
+			height: 230px;
+			h1{
+				padding-left:18px;
+				height: 54px;
+				line-height: 54px;
+				font-size: 16px;
+			}
+			div{
+				border-top: 1px solid #E0E0E0;
+			}
+			p{
+				padding-left:18px;
+				margin-top: 20px;
+				font-size: 14px;
+				color: #9B9B9B;
+			}
+			a{
+				display: inline-block;
+				width: 202px;
+				height: 110px;
+				margin-top: 10px;
+				background:url(../images/vidio.png) no-repeat 18px 0;
+				img{
+					margin-left: 82px;
+					margin-top: 30px;
+				}
+			}
+		}
+		&_hot{
+			height:778px;
+			background:white;
+			margin-top:20px;
+			h1{
+				padding-left:18px;
+				height: 56px;
+				border-bottom: 1px solid #E0E0E0;
+				font-size: 16px;
+				line-height: 56px;
+			}
+			ul{
+				list-style: none;
+				font-size: 14px;
+				color: #3B3B3B;
+				border-top: 1px solid #E0E0E0;
+				li{
+					margin-top:20px;
+					padding-left:18px;
+					height: 50px;
+					position:relative;
+					background:url(../images/people.png) no-repeat 84px 26px;
+					a{
+						text-decoration: none;
+						font-size: 14px;
+						color: black;
+						position:absolute;
+						left: 84px;
+					}
+					span{
+						position:absolute;
+						left: 98px;
+						top:26px;
+						color: #9D9D9D;
+						font-size: 14px;
+		
+					}
+				}
+			}
+		}
+
+	}
+}
+.footer{
+	position:relative;
+	height:262px;
+	background:#21262B;
+	&-address{
+		margin-left: 256px;
+		padding-top: 94px;
+		h1{
+			color:#439326;
+			font-size:22px;
+			margin-bottom: 28px;
+		}
+		span{
+			font-size: 12px;
+			color: #A0A3A4;
+		}
+	}
+	&-link{
+		position:absolute;
+		left: 800px;
+		top: 82px;
+		color:  #A0A3A4;
+		font-size: 12px;
+		h4{
+			margin-bottom: 16px;
+		}
+		a{
+			display: block;
+			font-size: 14px;
+			margin-bottom: 16px;
+			text-decoration: none;
+			color:   #A0A3A4;
+		}
+	}
+	&-us{
+		position:absolute;
+		left: 1008px;
+		top: 82px;
+		color:  #A0A3A4;
+		font-size: 12px;
+		width: 70px;
+		h4{
+			margin-bottom: 16px;
+		}
+		a{
+			display: block;
+			font-size: 14px;
+			margin-bottom: 16px;
+			text-decoration: none;
+			color:   #A0A3A4;
+		}
+		.care{
+			background:url(../images/weibo.png) no-repeat 40px 0;
+			height: 20px;
+		}
+	}
+	&-more{
+		left: 1142px;
+		position:absolute;
+		top: 82px;
+		color:  #A0A3A4;
+		font-size: 12px;
+		h4{
+			margin-bottom: 16px;
+		}
+		a{
+			display: block;
+			font-size: 14px;
+			margin-bottom: 16px;
+			text-decoration: none;
+			color:   #A0A3A4;
+		}
+	}
+}
