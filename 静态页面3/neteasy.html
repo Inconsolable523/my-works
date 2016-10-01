@@ -3,58 +3,78 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title></title>
     <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <script src="js/require.js" defer async data-main="js/main"></script>
 </head>
 
 <body>
-    <!-- 头部 -->
-    <!-- 不再提醒+导航栏+轮播广告+课程+宣传图片 -->
-    <header>
-    <div class="header">
-        <div class="header-search">
-            <span class="header-search-adver">网易云课堂微专业，帮助你掌握专业技能，令你求职或加薪多一份独特优势！</span>
-            <a href="#">立即查看></a>
-            <span>x不再提醒</span>
-        </div>
-        <nav>
-        <div class="nav">
-            <span style="color:#4EAB46;margin-left:206px;font-size:22px;">EDU | </span>
-            <span style="font-size:22px">网易教育产品部</span>
-            <ul>s
-                <li  style="margin-right:418px;"><a href="#" class="nav-care">+关注 </a>粉丝 45</li>
-                <li style="margin-right:54px;">网易公开课</li>
-                <li style="margin-right:56px;">云课堂</li>
-                <li style="margin-right:30px;">中国大学MOOC</li>
-                <li style="margin-right:218px;"><a href="#"><img src="images/search.png"></a></li>
-            </ul>
+         <!--不再提醒-->
+         <div class="presentation" id="J_presentation" style="display: none;">
+             <div class="presentation-middle">
+                 <span>网易云课堂微专业，帮助你掌握专业技能，令你求职或加薪多一份独特优势！</span>
+                 <a href="#" class="presentation-watch">立即查看 ></a>
+                 <a class="presentation-delete" id="J_delete"><span>X</span>不再提醒</a>
+             </div>
+         </div>
+         <!-- 头部 -->
+         <!-- 导航栏+轮播广告+课程+宣传图片 -->
+    <header class="header">
+        <!--导航栏-->
+        <nav class="nav">
+        <div class="nav-middle">
+            <div class="nav-left">
+                <span class="nav-left-title"><b>EDU</b><span class="bug">|</span><span style="color: #2a2a2a;">网易教育产品部</span></span>
+                <span class="nav-left-follow">
+                    <a href="#" id="J_nav-care" class="nav-left-follow_care"><span><b>+</b></span>关注</a>
+                    <span id="J_followed" class="followed" style="display: none;">
+                        <span>✓已关注<span>|</span></span>
+                        <a id="J_remove" class="remove" href="#">取消</a>
+                    </span>
+                    <span id="J_fans" class="nav-left-follow_fans">粉丝<span>45</span></span>
+                </span>
+            </div>
+            <div class="nav-right">
+                <a href="#" class="nav-right-class">网易公开课</a>
+                <a href="#" class="nav-right-class">云课堂</a>
+                <a href="#" class="nav-right-class">中国大学MOOC</a>
+                <a href="#"><img src="images/search.png"></a>
+                
+            </div>
         </div>
         </nav>
-        <div class="header-banner">
-        <ul>
-            <li><img src="images/banner1.jpg"></li>
-            <li><img src="images/banner2.jpg"></li>
-            <li><img src="images/banner3.jpg"></li>
-            </ul>
+        <div class="header-banner" >
+        <ul id="J_banner">
+            <li><a href="http://open.163.com/"><img src="images/banner1.jpg" class="on"></a></li>
+            <li><a href="http://study.163.com/" ><img src="images/banner2.jpg"></a></li>
+            <li><a href="http://www.icourse163.org/" ><img src="images/banner3.jpg"></a></li>
+        </ul>
+            <div class="header-banner_btn" id="J_btn">
+                <span J_index="0" class="on"></span>
+                <span J_index="1" ></span>
+                <span J_index="2"></span>
+            </div>
         </div>
         <div class="header-class">
             <div class="header-class_neteasy">
                 <img src="images/class1.png">
                 <h1>网易公开课</h1>
                 <p>推出国内外名校公开课，涉及广泛的学科，名校老师认真讲解深度剖析，网易视频公开课频道搭建起强有力的网络视频教学平台。</p>
-                <a href="#">了解更多 ></a>
+                <a href="http://open.163.com/">了解更多 ></a>
             </div>
             <div class="header-class_cloud">
              <img src="images/class2.png">
                 <h1>云课堂</h1>
                 <p>网易旗下大型在线学习平台，该平台面向学习者提供海量免费、优质课程,创新的个性化学习体验，自由开放的交流互动环境。</p>
-                <a href="#">了解更多 ></a>
+                <a href="http://study.163.com/">了解更多 ></a>
             </div>
             <div class="header-class_Mooc">
              <img src="images/class3.png">
                 <h1>中国大学MOOC</h1>
                 <p>是爱课程网携手云课堂打造的在线学习平台，每一个有提升愿望的人,都可以在这里学习中国最好的大学课程，学完还能获得认证证书。</p>
-                <a href="#">了解更多 ></a>
+                <a href="http://www.icourse163.org/">了解更多 ></a>
             </div>
         </div>
         <div class="header-picture">
@@ -64,179 +84,179 @@
             <img src="images/header-picture4.png">
             <img src="images/header-picture5.png">
         </div>
-        </div>
     </header>
     <!-- 主内容 -->
     <div class="middle">
     <div class="main">
         <div class="main-left">
             <div class="main-left_change">
-                <a href="#" class="checked"><span>产品设计</span></a>
-                <a href="#"><span>编程语言</span></a>
+                <a href="#" class="checked" id="J_change1" data-type="10"><span>产品设计</span></a>
+                <a href="#" id="J_change2" data-type="20"><span>编程语言</span></a>
             </div>
             <div class="main-left_class">
-                <div class="main-left_class--picture">
-                    <dl>
-                        <dt><img src="images/1.png"></dt>
-                        <dd>
-                            <a href="#">混音全揭秘 舞曲实战篇 揭秘音乐揭秘...</a>
-                            <span class="mousic-style">音频帮</span>
-                            <span>￥800.00</span>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt><img src="images/2.png"></dt>
-                        <dd>
-                            <a href="#">混音全揭秘 舞曲实战篇 揭秘音乐揭秘...</a>
-                            <span class="mousic-style">音频帮</span>
-                            <span class="checked">￥800.00</span>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt><img src="images/3.png"></dt>
-                        <dd>
-                            <a href="#">混音全揭秘 舞曲实战篇 揭秘音乐揭秘...</a>
-                            <span class="mousic-style">音频帮</span>
-                            <span class="checked">￥800.00</span>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt><img src="images/4.png"></dt>
-                        <dd>
-                            <a href="#">混音全揭秘 舞曲实战篇 揭秘音乐揭秘...</a>
-                            <span class="mousic-style">音频帮</span>
-                            <span class="checked">￥800.00</span>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt><img src="images/2.png"></dt>
-                        <dd>
-                            <a href="#">混音全揭秘 舞曲实战篇 揭秘音乐揭秘...</a>
-                            <span class="mousic-style">音频帮</span>
-                            <span class="checked">￥800.00</span>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt><img src="images/2.png"></dt>
-                        <dd>
-                            <a href="#">混音全揭秘 舞曲实战篇 揭秘音乐揭秘...</a>
-                            <span class="mousic-style">音频帮</span>
-                            <span class="checked">￥800.00</span>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt><img src="images/2.png"></dt>
-                        <dd>
-                            <a href="#">混音全揭秘 舞曲实战篇 揭秘音乐揭秘...</a>
-                            <span class="mousic-style">音频帮</span>
-                            <span class="checked">￥800.00</span>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt><img src="images/2.png"></dt>
-                        <dd>
-                            <a href="#">混音全揭秘 舞曲实战篇 揭秘音乐揭秘...</a>
-                            <span class="mousic-style">音频帮</span>
-                            <span class="checked">￥800.00</span>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt><img src="images/2.png"></dt>
-                        <dd>
-                            <a href="#">混音全揭秘 舞曲实战篇 揭秘音乐揭秘...</a>
-                            <span class="mousic-style">音频帮</span>
-                            <span class="checked">￥800.00</span>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt><img src="images/2.png"></dt>
-                        <dd>
-                            <a href="#">混音全揭秘 舞曲实战篇 揭秘音乐揭秘...</a>
-                            <span class="mousic-style">音频帮</span>
-                            <span class="checked">￥800.00</span>
-                        </dd>
-                    </dl>
-                    v
-                    <dl>
-                        <dt><img src="images/2.png"></dt>
-                        <dd>
-                            <a href="#">混音全揭秘 舞曲实战篇 揭秘音乐揭秘...</a>
-                            <span class="mousic-style">音频帮</span>
-                            <span class="checked">￥800.00</span>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt><img src="images/2.png"></dt>
-                        <dd>
-                            <a href="#">混音全揭秘 舞曲实战篇 揭秘音乐揭秘...</a>
-                            <span class="mousic-style">音频帮</span>
-                            <span class="checked">￥800.00</span>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt><img src="images/2.png"></dt>
-                        <dd>
-                            <a href="#">混音全揭秘 舞曲实战篇 揭秘音乐揭秘...</a>
-                            <span class="mousic-style">音频帮</span>
-                            <span class="checked">￥800.00</span>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt><img src="images/2.png"></dt>
-                        <dd>
-                            <a href="#">混音全揭秘 舞曲实战篇 揭秘音乐揭秘...</a>
-                            <span class="mousic-style">音频帮</span>
-                            <span class="checked">￥800.00</span>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt><img src="images/2.png"></dt>
-                        <dd>
-                            <a href="#">混音全揭秘 舞曲实战篇 揭秘音乐揭秘...</a>
-                            <span class="mousic-style">音频帮</span>
-                            <span class="checked">￥800.00</span>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt><img src="images/2.png"></dt>
-                        <dd>
-                            <a href="#">混音全揭秘 舞曲实战篇 揭秘音乐揭秘...</a>
-                            <span class="mousic-style">音频帮</span>
-                            <span class="checked">￥800.00</span>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt><img src="images/2.png"></dt>
-                        <dd>
-                            <a href="#">混音全揭秘 舞曲实战篇 揭秘音乐揭秘...</a>
-                            <span class="mousic-style">音频帮</span>
-                            <span class="checked">￥800.00</span>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt><img src="images/2.png"></dt>
-                        <dd>
-                            <a href="#">混音全揭秘 舞曲实战篇 揭秘音乐揭秘...</a>
-                            <span class="mousic-style">音频帮</span>
-                            <span class="checked">￥800.00</span>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt><img src="images/2.png"></dt>
-                        <dd>
-                            <a href="#">混音全揭秘 舞曲实战篇 揭秘音乐揭秘...</a>
-                            <span class="mousic-style">音频帮</span>
-                            <span class="checked">￥800.00</span>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt><img src="images/2.png"></dt>
-                        <dd>
-                            <a href="#">混音全揭秘 舞曲实战篇 揭秘音乐揭秘...</a>
-                            <span class="mousic-style">音频帮</span>
-                            <span class="checked">￥800.00</span>
-                        </dd>
-                    </dl>
+                <div class="main-left_class--picture" id="J_main-picture">
+                    <!--juicer渲染-->
+                    <!--<dl>-->
+                        <!--<dt><img src="images/1.png"></dt>-->
+                        <!--<dd>-->
+                            <!--<a href="#">混音全揭秘 舞曲实战篇 揭秘音乐揭秘...</a>-->
+                            <!--<span class="mousic-style">音频帮</span>-->
+                            <!--<span class="checked">￥800.00</span>-->
+                        <!--</dd>-->
+                    <!--</dl>-->
+                    <!--<dl>-->
+                        <!--<dt><img src="images/2.png"></dt>-->
+                        <!--<dd>-->
+                            <!--<a href="#">混音全揭秘 舞曲实战篇 揭秘音乐揭秘...</a>-->
+                            <!--<span class="mousic-style">音频帮</span>-->
+                            <!--<span class="checked">￥800.00</span>-->
+                        <!--</dd>-->
+                    <!--</dl>-->
+                    <!--<dl>-->
+                        <!--<dt><img src="images/3.png"></dt>-->
+                        <!--<dd>-->
+                            <!--<a href="#">混音全揭秘 舞曲实战篇 揭秘音乐揭秘...</a>-->
+                            <!--<span class="mousic-style">音频帮</span>-->
+                            <!--<span class="checked">￥800.00</span>-->
+                        <!--</dd>-->
+                    <!--</dl>-->
+                    <!--<dl>-->
+                        <!--<dt><img src="images/4.png"></dt>-->
+                        <!--<dd>-->
+                            <!--<a href="#">混音全揭秘 舞曲实战篇 揭秘音乐揭秘...</a>-->
+                            <!--<span class="mousic-style">音频帮</span>-->
+                            <!--<span class="checked">￥800.00</span>-->
+                        <!--</dd>-->
+                    <!--</dl>-->
+                    <!--<dl>-->
+                        <!--<dt><img src="images/2.png"></dt>-->
+                        <!--<dd>-->
+                            <!--<a href="#">混音全揭秘 舞曲实战篇 揭秘音乐揭秘...</a>-->
+                            <!--<span class="mousic-style">音频帮</span>-->
+                            <!--<span class="checked">￥800.00</span>-->
+                        <!--</dd>-->
+                    <!--</dl>-->
+                    <!--<dl>-->
+                        <!--<dt><img src="images/2.png"></dt>-->
+                        <!--<dd>-->
+                            <!--<a href="#">混音全揭秘 舞曲实战篇 揭秘音乐揭秘...</a>-->
+                            <!--<span class="mousic-style">音频帮</span>-->
+                            <!--<span class="checked">￥800.00</span>-->
+                        <!--</dd>-->
+                    <!--</dl>-->
+                    <!--<dl>-->
+                        <!--<dt><img src="images/2.png"></dt>-->
+                        <!--<dd>-->
+                            <!--<a href="#">混音全揭秘 舞曲实战篇 揭秘音乐揭秘...</a>-->
+                            <!--<span class="mousic-style">音频帮</span>-->
+                            <!--<span class="checked">￥800.00</span>-->
+                        <!--</dd>-->
+                    <!--</dl>-->
+                    <!--<dl>-->
+                        <!--<dt><img src="images/2.png"></dt>-->
+                        <!--<dd>-->
+                            <!--<a href="#">混音全揭秘 舞曲实战篇 揭秘音乐揭秘...</a>-->
+                            <!--<span class="mousic-style">音频帮</span>-->
+                            <!--<span class="checked">￥800.00</span>-->
+                        <!--</dd>-->
+                    <!--</dl>-->
+                    <!--<dl>-->
+                        <!--<dt><img src="images/2.png"></dt>-->
+                        <!--<dd>-->
+                            <!--<a href="#">混音全揭秘 舞曲实战篇 揭秘音乐揭秘...</a>-->
+                            <!--<span class="mousic-style">音频帮</span>-->
+                            <!--<span class="checked">￥800.00</span>-->
+                        <!--</dd>-->
+                    <!--</dl>-->
+                    <!--<dl>-->
+                        <!--<dt><img src="images/2.png"></dt>-->
+                        <!--<dd>-->
+                            <!--<a href="#">混音全揭秘 舞曲实战篇 揭秘音乐揭秘...</a>-->
+                            <!--<span class="mousic-style">音频帮</span>-->
+                            <!--<span class="checked">￥800.00</span>-->
+                        <!--</dd>-->
+                    <!--</dl>-->
+                    <!--v-->
+                    <!--<dl>-->
+                        <!--<dt><img src="images/2.png"></dt>-->
+                        <!--<dd>-->
+                            <!--<a href="#">混音全揭秘 舞曲实战篇 揭秘音乐揭秘...</a>-->
+                            <!--<span class="mousic-style">音频帮</span>-->
+                            <!--<span class="checked">￥800.00</span>-->
+                        <!--</dd>-->
+                    <!--</dl>-->
+                    <!--<dl>-->
+                        <!--<dt><img src="images/2.png"></dt>-->
+                        <!--<dd>-->
+                            <!--<a href="#">混音全揭秘 舞曲实战篇 揭秘音乐揭秘...</a>-->
+                            <!--<span class="mousic-style">音频帮</span>-->
+                            <!--<span class="checked">￥800.00</span>-->
+                        <!--</dd>-->
+                    <!--</dl>-->
+                    <!--<dl>-->
+                        <!--<dt><img src="images/2.png"></dt>-->
+                        <!--<dd>-->
+                            <!--<a href="#">混音全揭秘 舞曲实战篇 揭秘音乐揭秘...</a>-->
+                            <!--<span class="mousic-style">音频帮</span>-->
+                            <!--<span class="checked">￥800.00</span>-->
+                        <!--</dd>-->
+                    <!--</dl>-->
+                    <!--<dl>-->
+                        <!--<dt><img src="images/2.png"></dt>-->
+                        <!--<dd>-->
+                            <!--<a href="#">混音全揭秘 舞曲实战篇 揭秘音乐揭秘...</a>-->
+                            <!--<span class="mousic-style">音频帮</span>-->
+                            <!--<span class="checked">￥800.00</span>-->
+                        <!--</dd>-->
+                    <!--</dl>-->
+                    <!--<dl>-->
+                        <!--<dt><img src="images/2.png"></dt>-->
+                        <!--<dd>-->
+                            <!--<a href="#">混音全揭秘 舞曲实战篇 揭秘音乐揭秘...</a>-->
+                            <!--<span class="mousic-style">音频帮</span>-->
+                            <!--<span class="checked">￥800.00</span>-->
+                        <!--</dd>-->
+                    <!--</dl>-->
+                    <!--<dl>-->
+                        <!--<dt><img src="images/2.png"></dt>-->
+                        <!--<dd>-->
+                            <!--<a href="#">混音全揭秘 舞曲实战篇 揭秘音乐揭秘...</a>-->
+                            <!--<span class="mousic-style">音频帮</span>-->
+                            <!--<span class="checked">￥800.00</span>-->
+                        <!--</dd>-->
+                    <!--</dl>-->
+                    <!--<dl>-->
+                        <!--<dt><img src="images/2.png"></dt>-->
+                        <!--<dd>-->
+                            <!--<a href="#">混音全揭秘 舞曲实战篇 揭秘音乐揭秘...</a>-->
+                            <!--<span class="mousic-style">音频帮</span>-->
+                            <!--<span class="checked">￥800.00</span>-->
+                        <!--</dd>-->
+                    <!--</dl>-->
+                    <!--<dl>-->
+                        <!--<dt><img src="images/2.png"></dt>-->
+                        <!--<dd>-->
+                            <!--<a href="#">混音全揭秘 舞曲实战篇 揭秘音乐揭秘...</a>-->
+                            <!--<span class="mousic-style">音频帮</span>-->
+                            <!--<span class="checked">￥800.00</span>-->
+                        <!--</dd>-->
+                    <!--</dl>-->
+                    <!--<dl>-->
+                        <!--<dt><img src="images/2.png"></dt>-->
+                        <!--<dd>-->
+                            <!--<a href="#">混音全揭秘 舞曲实战篇 揭秘音乐揭秘...</a>-->
+                            <!--<span class="mousic-style">音频帮</span>-->
+                            <!--<span class="checked">￥800.00</span>-->
+                        <!--</dd>-->
+                    <!--</dl>-->
+                    <!--<dl>-->
+                        <!--<dt><img src="images/2.png"></dt>-->
+                        <!--<dd>-->
+                            <!--<a href="#">混音全揭秘 舞曲实战篇 揭秘音乐揭秘...</a>-->
+                            <!--<span class="mousic-style">音频帮</span>-->
+                            <!--<span class="checked">￥800.00</span>-->
+                        <!--</dd>-->
+                    <!--</dl>-->
                 </div>
                 <div class="main-left_class--list">
                            <a href="#" style="width:30px;background: #8DD2A1;
@@ -357,6 +377,37 @@
         </div>
         </div>
     </footer>
+    <!--登陆-->
+    <div class="login" id="J_login">
+        <div class="login-middle">
+        <h1 >登录网易云课堂</h1>
+        <form>
+            <input class="login-name" id="J_uname" type="text" value="" placeholder="账号"><br>
+            <input class="login-password" id="J_upassword" type="password"  placeholder="密码" value="">
+        </form>
+        <button class="login-in" id="J_login-in">登录</button>
+            <a id="J_close" class="login-close"></a>
+        </div>
+    </div>
+    <div class="background" id="J_background"></div>
+<!--juicer-->
+<script id="courseTpl" type="text/template">
+{@each list as item}
+<dl>
+    <dt>
+    <img src="${item.middlePhotoUrl}" alt="">
+    </dt>
+    <dd>
+        <a href="">${item.name}</a>
+        <span class="mousic-style">${item.provider}</span>
+        {@if item.price == 0}
+        <span class="checked" style="color:#39a030">免费</span>
+        {@else}
+        <span class="checked">${item.price}</span>
+        {@/if}
+    </dd>
+</dl>
+</script>
 </body>
 
 </html>

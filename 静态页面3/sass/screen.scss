@@ -3,63 +3,162 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-// @import "Compass/reset"
-*{
-	margin:0;
-	padding:0;
-}
+@import "../stylesheets/reset.css";
 body{
 	width: 1616px;
 	margin:0 auto;
 	list-style:none;
+	font-family:"Microsoft YaHei", Helvetica, GillSansMT, sans-serif;
 }
-.header{
-	&-search{
-			height:36px;
-			line-height: 36px;
-			font-size:12px;
-			font-family: "华文仿宋",serif,sans-serif;
-			background: #F0F0F0;
-			&-adver{
-				margin-left:206px;
+.presentation{
+	width: 100%;
+	height: 36px;
+	color:#333;
+	background:#f3f3f3 ;
+	font-size:12px ;
+	line-height: 36px;
+	.presentation-middle{
+		width:1206px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	&-watch{
+		margin-left: 14px;
+		color: #4eab46;
+		text-decoration: none;
+	}
+	&-delete{
+		float: right;
+		span{
+			margin-right: 6px;
+		}
+	}
+
+}
+.nav{
+	width: 100%;
+	height: 57px;
+	padding-top:31px;
+	&-middle{
+		width: 1206px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	&-left{
+		display: inline;
+		position:relative;
+		color: #2a2a2a;
+		&-title{
+			font-size: 22px;
+			color: #4eab46;
+				.bug{
+					margin-left: 10px;
+					margin-right: 10px;
+				}
+
+		}
+		&-follow{
+			position: absolute;
+			margin-left: 30px;
+			font-size: 12px;
+			&_care{
+				line-height: 21px;
+				display: inline-block;
+				width: 54px;
+				height: 20px;
+				margin-right: 14px;
+				background: #4eab46;
+				color: #fff;
+				text-decoration: none;
+				text-align: center;
+				margin-top: 3px;
+				span{
+					b{
+						color: #fff;
+					}
+				}
 			}
-			a{
-				margin-left:14px;
-				color: #4EAB46;
-				margin-right:670px;
-				text-decoration:none;
+			.followed{
+				display: inline-block;
+				width: 104px;
+				height: 20px;
+				background: #F6F6F6;
+				border: 1px solid #9d9d9d;
+				position: relative;
+				margin-top: 2px;
+				line-height: 20px;
+				text-align: center;
+				a{
+					text-decoration: none;
+					color: #9b9b9b;
+				}
+				a:hover{
+					color: #459947;
+				}
+			}
+			&_fans{
+				color: #b8b8b8;
+				position: absolute;
+				top: 7px;
+				right: -50px;
+				span{
+					margin-left: 6px;
+				}
 			}
 		}
 	}
-.nav{
-	height:88px;
-	line-height:88px;
-	font-family:"ヒラギノ角ゴ 簡体中文",serif,sans-serif;
-	ul{
-		list-style: none;
+	&-right{
 		float: right;
-	}
-	li{
-		float: left;
-	}
-	&-care{
-		text-decoration: none;
-		width: 54px;
-		height: 22px;
-		line-height: 22px;
-		background: #4EAB46;
-		color: white;
-		margin-right:14px;
+		font-size: 16px;
+		&-class{
+			text-decoration: none;
+			color: #868686;
+			margin-left:24px;
+			margin-right: 24px;
+		}
+
 	}
 }
 .header-banner{
 	overflow:hidden;
+	width: 100%;
+	height: 460px;
+	position: relative;
 	ul{
 		width: 4956px;
+		position: absolute;
+		left: 0;
+		z-index: 1;
 
 	}
 	li{
 		float: left;
+	}
+	//增添
+	//img{
+	//	display: none;
+	//}
+	//.on{
+	//	display: list-item;
+	//}
+	&_btn{
+		position: absolute;
+		width: 64px;
+		height: 10px;
+		z-index: 5;
+		left: 50%;
+		bottom: 20px;
+		.on{
+			background: black;
+		}
+		span{
+			border-radius: 50%;
+			width: 10px;
+			height: 10px;
+			background: white;
+			margin-right: 11px;
+			float: left;
+		}
 	}
 }
 .header-class{
@@ -70,6 +169,9 @@ body{
 	line-height: 25px;
 	color: #B8B8B8;
 	letter-spacing:2px;
+	a:hover{
+		text-decoration: underline;
+	}
 	&_neteasy{
 		width: 270px;
 		position:absolute;
@@ -390,4 +492,72 @@ body{
 			color:   #A0A3A4;
 		}
 	}
+}
+//登录
+.login{
+	display: none;
+	width: 386px;
+	height: 286px;
+	left: 50%;
+	top: 50%;
+	margin-top: -193px;
+	margin-left: -143px;
+	position: fixed;
+	background: #fff;
+	font-family: "华文仿宋", serif, sans-serif;
+	z-index: 11;
+	&-middle{
+		width: 296px;
+		height: 222px;
+		margin: 30px auto 38px auto;
+		color: #2a2a2a;
+	}
+	h1{
+		font-size: 18px;
+		margin-bottom: 20px;
+	}
+	input{
+		width: 294px;
+		height: 42px;
+		color: #9d9d9d;
+		font-size: 18px;
+		line-height: 42px;
+		background: #F9F9F9;
+		border: 1px solid #D7D7D7;
+		text-indent: 12px;
+	}
+	&-password{
+		margin-top: 14px;
+		margin-bottom: 28px;
+	}
+	&-in{
+		width: 294px;
+		height: 42px;
+		background: #49A037;
+		text-align: center;
+		font-size: 18px;
+		color: #fff;
+		border: 0;
+	}
+	&-close{
+		position: absolute;
+		top: 10px;
+		right: 8px;
+		display: inline-block;
+		width: 12px;
+		height: 12px;
+		background: url("../images/close.gif") no-repeat;
+
+	}
+}
+.background{
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: #262626;
+	opacity: .5;
+	z-index: 10;
 }

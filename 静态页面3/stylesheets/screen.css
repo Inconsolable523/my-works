@@ -3,79 +3,183 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import url(../stylesheets/reset.css);
 /* line 7, ../sass/screen.scss */
-* {
-  margin: 0;
-  padding: 0;
-}
-
-/* line 11, ../sass/screen.scss */
 body {
   width: 1616px;
   margin: 0 auto;
   list-style: none;
+  font-family: "Microsoft YaHei", Helvetica, GillSansMT, sans-serif;
 }
 
-/* line 17, ../sass/screen.scss */
-.header-search {
+/* line 13, ../sass/screen.scss */
+.presentation {
+  width: 100%;
   height: 36px;
-  line-height: 36px;
+  color: #333;
+  background: #f3f3f3;
   font-size: 12px;
-  font-family: "华文仿宋",serif,sans-serif;
-  background: #F0F0F0;
+  line-height: 36px;
 }
-/* line 23, ../sass/screen.scss */
-.header-search-adver {
-  margin-left: 206px;
+/* line 20, ../sass/screen.scss */
+.presentation .presentation-middle {
+  width: 1206px;
+  margin-left: auto;
+  margin-right: auto;
 }
-/* line 26, ../sass/screen.scss */
-.header-search a {
+/* line 25, ../sass/screen.scss */
+.presentation-watch {
   margin-left: 14px;
-  color: #4EAB46;
-  margin-right: 670px;
+  color: #4eab46;
   text-decoration: none;
 }
-
-/* line 34, ../sass/screen.scss */
-.nav {
-  height: 88px;
-  line-height: 88px;
-  font-family: "ヒラギノ角ゴ 簡体中文",serif,sans-serif;
-}
-/* line 38, ../sass/screen.scss */
-.nav ul {
-  list-style: none;
+/* line 30, ../sass/screen.scss */
+.presentation-delete {
   float: right;
 }
-/* line 42, ../sass/screen.scss */
-.nav li {
-  float: left;
-}
-/* line 45, ../sass/screen.scss */
-.nav-care {
-  text-decoration: none;
-  width: 54px;
-  height: 22px;
-  line-height: 22px;
-  background: #4EAB46;
-  color: white;
-  margin-right: 14px;
+/* line 32, ../sass/screen.scss */
+.presentation-delete span {
+  margin-right: 6px;
 }
 
-/* line 55, ../sass/screen.scss */
+/* line 38, ../sass/screen.scss */
+.nav {
+  width: 100%;
+  height: 57px;
+  padding-top: 31px;
+}
+/* line 42, ../sass/screen.scss */
+.nav-middle {
+  width: 1206px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 47, ../sass/screen.scss */
+.nav-left {
+  display: inline;
+  position: relative;
+  color: #2a2a2a;
+}
+/* line 51, ../sass/screen.scss */
+.nav-left-title {
+  font-size: 22px;
+  color: #4eab46;
+}
+/* line 54, ../sass/screen.scss */
+.nav-left-title .bug {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+/* line 60, ../sass/screen.scss */
+.nav-left-follow {
+  position: absolute;
+  margin-left: 30px;
+  font-size: 12px;
+}
+/* line 64, ../sass/screen.scss */
+.nav-left-follow_care {
+  line-height: 21px;
+  display: inline-block;
+  width: 54px;
+  height: 20px;
+  margin-right: 14px;
+  background: #4eab46;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 3px;
+}
+/* line 76, ../sass/screen.scss */
+.nav-left-follow_care span b {
+  color: #fff;
+}
+/* line 81, ../sass/screen.scss */
+.nav-left-follow .followed {
+  display: inline-block;
+  width: 104px;
+  height: 20px;
+  background: #F6F6F6;
+  border: 1px solid #9d9d9d;
+  position: relative;
+  margin-top: 2px;
+  line-height: 20px;
+  text-align: center;
+}
+/* line 91, ../sass/screen.scss */
+.nav-left-follow .followed a {
+  text-decoration: none;
+  color: #9b9b9b;
+}
+/* line 95, ../sass/screen.scss */
+.nav-left-follow .followed a:hover {
+  color: #459947;
+}
+/* line 99, ../sass/screen.scss */
+.nav-left-follow_fans {
+  color: #b8b8b8;
+  position: absolute;
+  top: 7px;
+  right: -50px;
+}
+/* line 104, ../sass/screen.scss */
+.nav-left-follow_fans span {
+  margin-left: 6px;
+}
+/* line 110, ../sass/screen.scss */
+.nav-right {
+  float: right;
+  font-size: 16px;
+}
+/* line 113, ../sass/screen.scss */
+.nav-right-class {
+  text-decoration: none;
+  color: #868686;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+/* line 122, ../sass/screen.scss */
 .header-banner {
   overflow: hidden;
+  width: 100%;
+  height: 460px;
+  position: relative;
 }
-/* line 57, ../sass/screen.scss */
+/* line 127, ../sass/screen.scss */
 .header-banner ul {
   width: 4956px;
+  position: absolute;
+  left: 0;
+  z-index: 1;
 }
-/* line 61, ../sass/screen.scss */
+/* line 134, ../sass/screen.scss */
 .header-banner li {
   float: left;
 }
+/* line 144, ../sass/screen.scss */
+.header-banner_btn {
+  position: absolute;
+  width: 64px;
+  height: 10px;
+  z-index: 5;
+  left: 50%;
+  bottom: 20px;
+}
+/* line 151, ../sass/screen.scss */
+.header-banner_btn .on {
+  background: black;
+}
+/* line 154, ../sass/screen.scss */
+.header-banner_btn span {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background: white;
+  margin-right: 11px;
+  float: left;
+}
 
-/* line 65, ../sass/screen.scss */
+/* line 164, ../sass/screen.scss */
 .header-class {
   height: 296px;
   position: relative;
@@ -85,105 +189,109 @@ body {
   color: #B8B8B8;
   letter-spacing: 2px;
 }
-/* line 73, ../sass/screen.scss */
+/* line 172, ../sass/screen.scss */
+.header-class a:hover {
+  text-decoration: underline;
+}
+/* line 175, ../sass/screen.scss */
 .header-class_neteasy {
   width: 270px;
   position: absolute;
   left: 290px;
   top: 62px;
 }
-/* line 78, ../sass/screen.scss */
+/* line 180, ../sass/screen.scss */
 .header-class_neteasy h1 {
   font-family: "MicrosoftYaHei",serif,sans-serif;
   font-size: 22px;
   color: #2A2A2A;
   margin-left: 20px;
 }
-/* line 84, ../sass/screen.scss */
+/* line 186, ../sass/screen.scss */
 .header-class_neteasy p {
   margin-bottom: 21px;
 }
-/* line 87, ../sass/screen.scss */
+/* line 189, ../sass/screen.scss */
 .header-class_neteasy img {
   position: absolute;
   left: -84px;
   top: 12px;
 }
-/* line 92, ../sass/screen.scss */
+/* line 194, ../sass/screen.scss */
 .header-class_neteasy a {
   color: #4EAB46;
   text-decoration: none;
 }
-/* line 97, ../sass/screen.scss */
+/* line 199, ../sass/screen.scss */
 .header-class_cloud {
   width: 245px;
   position: absolute;
   left: 733px;
   top: 62px;
 }
-/* line 102, ../sass/screen.scss */
+/* line 204, ../sass/screen.scss */
 .header-class_cloud h1 {
   font-family: "MicrosoftYaHei",serif,sans-serif;
   font-size: 22px;
   color: #2A2A2A;
   margin-left: 20px;
 }
-/* line 108, ../sass/screen.scss */
+/* line 210, ../sass/screen.scss */
 .header-class_cloud p {
   margin-bottom: 21px;
 }
-/* line 111, ../sass/screen.scss */
+/* line 213, ../sass/screen.scss */
 .header-class_cloud img {
   position: absolute;
   left: -100px;
   top: 12px;
 }
-/* line 116, ../sass/screen.scss */
+/* line 218, ../sass/screen.scss */
 .header-class_cloud a {
   color: #4EAB46;
   text-decoration: none;
 }
-/* line 121, ../sass/screen.scss */
+/* line 223, ../sass/screen.scss */
 .header-class_Mooc {
   width: 278px;
   position: absolute;
   left: 1139px;
   top: 62px;
 }
-/* line 126, ../sass/screen.scss */
+/* line 228, ../sass/screen.scss */
 .header-class_Mooc h1 {
   font-family: "MicrosoftYaHei",serif,sans-serif;
   font-size: 22px;
   color: #2A2A2A;
   margin-left: 20px;
 }
-/* line 132, ../sass/screen.scss */
+/* line 234, ../sass/screen.scss */
 .header-class_Mooc p {
   margin-bottom: 21px;
 }
-/* line 135, ../sass/screen.scss */
+/* line 237, ../sass/screen.scss */
 .header-class_Mooc img {
   position: absolute;
   left: -84px;
   top: 12px;
 }
-/* line 140, ../sass/screen.scss */
+/* line 242, ../sass/screen.scss */
 .header-class_Mooc a {
   color: #4EAB46;
   text-decoration: none;
 }
 
-/* line 146, ../sass/screen.scss */
+/* line 248, ../sass/screen.scss */
 .header-picture {
   height: 220px;
 }
 
-/* line 149, ../sass/screen.scss */
+/* line 251, ../sass/screen.scss */
 .middle {
   background: #F6F6F6;
 }
 
-/* line 152, ../sass/screen.scss */
+/* line 254, ../sass/screen.scss */
 .main {
   height: 1552px;
   width: 1207px;
@@ -191,16 +299,16 @@ body {
   margin: 0 auto;
   position: relative;
 }
-/* line 158, ../sass/screen.scss */
+/* line 260, ../sass/screen.scss */
 .main-left {
   width: 980px;
 }
-/* line 161, ../sass/screen.scss */
+/* line 263, ../sass/screen.scss */
 .main-left_change .checked {
   background: #4EAB46;
   color: white;
 }
-/* line 165, ../sass/screen.scss */
+/* line 267, ../sass/screen.scss */
 .main-left_change a {
   display: inline-block;
   width: 200px;
@@ -213,20 +321,20 @@ body {
   margin-right: -4px;
   color: #575757;
 }
-/* line 176, ../sass/screen.scss */
+/* line 278, ../sass/screen.scss */
 .main-left_change a span {
   line-height: 48px;
 }
-/* line 179, ../sass/screen.scss */
+/* line 281, ../sass/screen.scss */
 .main-left_change a:hover {
   background: #4EAB46;
   color: white;
 }
-/* line 185, ../sass/screen.scss */
+/* line 287, ../sass/screen.scss */
 .main-left_class {
   margin-top: 28px;
 }
-/* line 187, ../sass/screen.scss */
+/* line 289, ../sass/screen.scss */
 .main-left_class dl {
   line-height: 22px;
   width: 222px;
@@ -238,41 +346,41 @@ body {
   font-size: 12px;
   font-family: "MicrosoftYaHei",serif,sans-serif;
 }
-/* line 197, ../sass/screen.scss */
+/* line 299, ../sass/screen.scss */
 .main-left_class dl dt {
   height: 125px;
 }
-/* line 200, ../sass/screen.scss */
+/* line 302, ../sass/screen.scss */
 .main-left_class dl dd {
   height: 104px;
   margin: 6px 10px 0 10px;
   background: url(../images/number.png) no-repeat 0 48px;
 }
-/* line 204, ../sass/screen.scss */
+/* line 306, ../sass/screen.scss */
 .main-left_class dl dd a {
   display: inline-block;
   width: 210px;
   text-decoration: none;
 }
-/* line 208, ../sass/screen.scss */
+/* line 310, ../sass/screen.scss */
 .main-left_class dl dd a:hover {
   color: #78B672;
 }
-/* line 212, ../sass/screen.scss */
+/* line 314, ../sass/screen.scss */
 .main-left_class dl dd span {
   display: block;
   color: #9F9F9F;
 }
-/* line 216, ../sass/screen.scss */
+/* line 318, ../sass/screen.scss */
 .main-left_class dl dd .checked {
   color: red;
   margin-top: 28px;
 }
-/* line 224, ../sass/screen.scss */
+/* line 326, ../sass/screen.scss */
 .main-left_class--list {
   margin-left: 656px;
 }
-/* line 226, ../sass/screen.scss */
+/* line 328, ../sass/screen.scss */
 .main-left_class--list a {
   display: inline-block;
   text-align: center;
@@ -283,42 +391,42 @@ body {
   margin-right: 5px;
   color: black;
 }
-/* line 235, ../sass/screen.scss */
+/* line 337, ../sass/screen.scss */
 .main-left_class--list a:hover {
   background: #8DD2A1;
   color: white;
 }
-/* line 242, ../sass/screen.scss */
+/* line 344, ../sass/screen.scss */
 .main-right {
   position: absolute;
   left: 980px;
   top: 84px;
   width: 226px;
 }
-/* line 247, ../sass/screen.scss */
+/* line 349, ../sass/screen.scss */
 .main-right_organizition {
   background: white;
   height: 230px;
 }
-/* line 250, ../sass/screen.scss */
+/* line 352, ../sass/screen.scss */
 .main-right_organizition h1 {
   padding-left: 18px;
   height: 54px;
   line-height: 54px;
   font-size: 16px;
 }
-/* line 256, ../sass/screen.scss */
+/* line 358, ../sass/screen.scss */
 .main-right_organizition div {
   border-top: 1px solid #E0E0E0;
 }
-/* line 259, ../sass/screen.scss */
+/* line 361, ../sass/screen.scss */
 .main-right_organizition p {
   padding-left: 18px;
   margin-top: 20px;
   font-size: 14px;
   color: #9B9B9B;
 }
-/* line 265, ../sass/screen.scss */
+/* line 367, ../sass/screen.scss */
 .main-right_organizition a {
   display: inline-block;
   width: 202px;
@@ -326,18 +434,18 @@ body {
   margin-top: 10px;
   background: url(../images/vidio.png) no-repeat 18px 0;
 }
-/* line 271, ../sass/screen.scss */
+/* line 373, ../sass/screen.scss */
 .main-right_organizition a img {
   margin-left: 82px;
   margin-top: 30px;
 }
-/* line 277, ../sass/screen.scss */
+/* line 379, ../sass/screen.scss */
 .main-right_hot {
   height: 778px;
   background: white;
   margin-top: 20px;
 }
-/* line 281, ../sass/screen.scss */
+/* line 383, ../sass/screen.scss */
 .main-right_hot h1 {
   padding-left: 18px;
   height: 56px;
@@ -345,14 +453,14 @@ body {
   font-size: 16px;
   line-height: 56px;
 }
-/* line 288, ../sass/screen.scss */
+/* line 390, ../sass/screen.scss */
 .main-right_hot ul {
   list-style: none;
   font-size: 14px;
   color: #3B3B3B;
   border-top: 1px solid #E0E0E0;
 }
-/* line 293, ../sass/screen.scss */
+/* line 395, ../sass/screen.scss */
 .main-right_hot ul li {
   margin-top: 20px;
   padding-left: 18px;
@@ -360,7 +468,7 @@ body {
   position: relative;
   background: url(../images/people.png) no-repeat 84px 26px;
 }
-/* line 299, ../sass/screen.scss */
+/* line 401, ../sass/screen.scss */
 .main-right_hot ul li a {
   text-decoration: none;
   font-size: 14px;
@@ -368,7 +476,7 @@ body {
   position: absolute;
   left: 84px;
 }
-/* line 306, ../sass/screen.scss */
+/* line 408, ../sass/screen.scss */
 .main-right_hot ul li span {
   position: absolute;
   left: 98px;
@@ -377,29 +485,29 @@ body {
   font-size: 14px;
 }
 
-/* line 320, ../sass/screen.scss */
+/* line 422, ../sass/screen.scss */
 .footer {
   position: relative;
   height: 262px;
   background: #21262B;
 }
-/* line 324, ../sass/screen.scss */
+/* line 426, ../sass/screen.scss */
 .footer-address {
   margin-left: 256px;
   padding-top: 94px;
 }
-/* line 327, ../sass/screen.scss */
+/* line 429, ../sass/screen.scss */
 .footer-address h1 {
   color: #439326;
   font-size: 22px;
   margin-bottom: 28px;
 }
-/* line 332, ../sass/screen.scss */
+/* line 434, ../sass/screen.scss */
 .footer-address span {
   font-size: 12px;
   color: #A0A3A4;
 }
-/* line 337, ../sass/screen.scss */
+/* line 439, ../sass/screen.scss */
 .footer-link {
   position: absolute;
   left: 800px;
@@ -407,11 +515,11 @@ body {
   color: #A0A3A4;
   font-size: 12px;
 }
-/* line 343, ../sass/screen.scss */
+/* line 445, ../sass/screen.scss */
 .footer-link h4 {
   margin-bottom: 16px;
 }
-/* line 346, ../sass/screen.scss */
+/* line 448, ../sass/screen.scss */
 .footer-link a {
   display: block;
   font-size: 14px;
@@ -419,7 +527,7 @@ body {
   text-decoration: none;
   color: #A0A3A4;
 }
-/* line 354, ../sass/screen.scss */
+/* line 456, ../sass/screen.scss */
 .footer-us {
   position: absolute;
   left: 1008px;
@@ -428,11 +536,11 @@ body {
   font-size: 12px;
   width: 70px;
 }
-/* line 361, ../sass/screen.scss */
+/* line 463, ../sass/screen.scss */
 .footer-us h4 {
   margin-bottom: 16px;
 }
-/* line 364, ../sass/screen.scss */
+/* line 466, ../sass/screen.scss */
 .footer-us a {
   display: block;
   font-size: 14px;
@@ -440,12 +548,12 @@ body {
   text-decoration: none;
   color: #A0A3A4;
 }
-/* line 371, ../sass/screen.scss */
+/* line 473, ../sass/screen.scss */
 .footer-us .care {
   background: url(../images/weibo.png) no-repeat 40px 0;
   height: 20px;
 }
-/* line 376, ../sass/screen.scss */
+/* line 478, ../sass/screen.scss */
 .footer-more {
   left: 1142px;
   position: absolute;
@@ -453,15 +561,91 @@ body {
   color: #A0A3A4;
   font-size: 12px;
 }
-/* line 382, ../sass/screen.scss */
+/* line 484, ../sass/screen.scss */
 .footer-more h4 {
   margin-bottom: 16px;
 }
-/* line 385, ../sass/screen.scss */
+/* line 487, ../sass/screen.scss */
 .footer-more a {
   display: block;
   font-size: 14px;
   margin-bottom: 16px;
   text-decoration: none;
   color: #A0A3A4;
+}
+
+/* line 497, ../sass/screen.scss */
+.login {
+  display: none;
+  width: 386px;
+  height: 286px;
+  left: 50%;
+  top: 50%;
+  margin-top: -193px;
+  margin-left: -143px;
+  position: fixed;
+  background: #fff;
+  font-family: "华文仿宋", serif, sans-serif;
+  z-index: 11;
+}
+/* line 509, ../sass/screen.scss */
+.login-middle {
+  width: 296px;
+  height: 222px;
+  margin: 30px auto 38px auto;
+  color: #2a2a2a;
+}
+/* line 515, ../sass/screen.scss */
+.login h1 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+/* line 519, ../sass/screen.scss */
+.login input {
+  width: 294px;
+  height: 42px;
+  color: #9d9d9d;
+  font-size: 18px;
+  line-height: 42px;
+  background: #F9F9F9;
+  border: 1px solid #D7D7D7;
+  text-indent: 12px;
+}
+/* line 529, ../sass/screen.scss */
+.login-password {
+  margin-top: 14px;
+  margin-bottom: 28px;
+}
+/* line 533, ../sass/screen.scss */
+.login-in {
+  width: 294px;
+  height: 42px;
+  background: #49A037;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+  border: 0;
+}
+/* line 542, ../sass/screen.scss */
+.login-close {
+  position: absolute;
+  top: 10px;
+  right: 8px;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: url("../images/close.gif") no-repeat;
+}
+
+/* line 553, ../sass/screen.scss */
+.background {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #262626;
+  opacity: .5;
+  z-index: 10;
 }
