@@ -89,8 +89,8 @@
     <div class="middle">
     <div class="main">
         <div class="main-left">
-            <div class="main-left_change">
-                <a href="#" class="checked" id="J_change1" data-type="10"><span>产品设计</span></a>
+            <div class="main-left_change" id="J_leftChange">
+                <a href="#" class="check" id="J_change1" data-type="10"><span>产品设计</span></a>
                 <a href="#" id="J_change2" data-type="20"><span>编程语言</span></a>
             </div>
             <div class="main-left_class">
@@ -259,17 +259,20 @@
                     <!--</dl>-->
                 </div>
                 <div class="main-left_class--list">
-                           <a href="#" style="width:30px;background: #8DD2A1;
+                           <a href="#" class="prv list-number" style="width:30px;background: #8DD2A1;
                     color: white;"><span><</span></a>
-                            <a href="#"><span>1</span></a>
-                            <a href="#"><span>2</span></a>
-                            <a href="#"><span>3</span></a>
-                            <a href="#"><span>4</span></a>
-                            <a href="#"><span>5</span></a>
-                            <a href="#"><span>6</span></a>
-                            <a href="#"><span>7</span></a>
-                            <a href="#"><span>8</span></a>
-                            <a href="#" style="width:30px;background: #8DD2A1;
+                    <div id="J_classList" style="display:inline-block;width: 240px;overflow: hidden;height: 20px;">
+                        <!--js渲染-->
+                        <!--<a href="#" class="list-number list-checked">1</a>-->
+                        <!--<a href="#" class="list-number">2</a>-->
+                        <!--<a href="#" class="list-number">3</a>-->
+                        <!--<a href="#" class="list-number">4</a>-->
+                        <!--<a href="#" class="list-number">5</a>-->
+                        <!--<a href="#" class="list-number">6</a>-->
+                        <!--<a href="#" class="list-number">7</a>-->
+                        <!--<a href="#" class="list-number">8</a>-->
+                    </div>
+                            <a href="#" class="next list-number" style="width:30px;background: #8DD2A1;
                     color: white;"><span>></span></a>
                 </div>
             </div>
@@ -279,73 +282,76 @@
                 <h1>机构介绍</h1>
                 <div>
                 <p>观看下面的视频来了解吧：</p>
-                <a href="#"><img src="images/play.png"></a>
+                <a href="#" id="J_play"><img src="images/play.png"></a>
                 </div>
             </div>
             <div class="main-right_hot">
                 <h1>最热排行</h1>
-                <ul>
-                    <li>
-                        <img src="images/h1.png">
-                        <a href="#">舞曲揭秘音乐揭秘...</a>
-                        <br>
-                        <span>21567</span>
-                    </li>
-                    <li>
-                        <img src="images/h2.png">
-                        <a href="#">舞曲揭秘</a>
-                        <br>
-                        <span>21567</span>
-                    </li>
-                    <li>
-                        <img src="images/h3.png">
-                        <a href="#">舞曲揭秘音乐揭秘...</a>
-                        <br>
-                        <span>21567</span>
-                    </li>
-                    <li>
-                        <img src="images/h6.png">
-                        <a href="#">舞曲揭秘音乐揭秘...</a>
-                        <br>
-                        <span>21567</span>
-                    </li>
-                    <li>
-                        <img src="images/h5.png">
-                        <a href="#">舞曲揭秘音乐揭秘...</a>
-                        <br>
-                        <span>21567</span>
-                    </li>
-                    <li>
-                        <img src="images/h6.png">
-                        <a href="#">舞曲揭秘音乐揭秘...</a>
-                        <br>
-                        <span>21567</span>
-                    </li>
-                    <li>
-                        <img src="images/h1.png">
-                        <a href="#">舞曲揭秘</a>
-                        <br>
-                        <span>21567</span>
-                    </li>
-                    <li>
-                        <img src="images/h2.png">
-                        <a href="#">舞曲揭秘音乐揭秘...</a>
-                        <br>
-                        <span>21567</span>
-                    </li>
-                    <li>
-                        <img src="images/h3.png">
-                        <a href="#">舞曲揭秘音乐揭秘...</a>
-                        <br>
-                        <span>21567</span>
-                    </li>
-                    <li>
-                        <img src="images/h5.png">
-                        <a href="#">舞曲揭秘音乐揭秘...</a>
-                        <br>
-                        <span>21567</span>
-                    </li>
+                <div style="width: 3000px">
+                <ul id="J_hot">
+                    <!--jucier渲染-->
+                    <!--<li>-->
+                        <!--<img src="images/h1.png">-->
+                        <!--<a href="#">舞曲揭秘音乐揭秘...</a>-->
+                        <!--<br>-->
+                        <!--<span>21567</span>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<img src="images/h2.png">-->
+                        <!--<a href="#">舞曲揭秘</a>-->
+                        <!--<br>-->
+                        <!--<span>21567</span>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<img src="images/h3.png">-->
+                        <!--<a href="#">舞曲揭秘音乐揭秘...</a>-->
+                        <!--<br>-->
+                        <!--<span>21567</span>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<img src="images/h6.png">-->
+                        <!--<a href="#">舞曲揭秘音乐揭秘...</a>-->
+                        <!--<br>-->
+                        <!--<span>21567</span>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<img src="images/h5.png">-->
+                        <!--<a href="#">舞曲揭秘音乐揭秘...</a>-->
+                        <!--<br>-->
+                        <!--<span>21567</span>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<img src="images/h6.png">-->
+                        <!--<a href="#">舞曲揭秘音乐揭秘...</a>-->
+                        <!--<br>-->
+                        <!--<span>21567</span>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<img src="images/h1.png">-->
+                        <!--<a href="#">舞曲揭秘</a>-->
+                        <!--<br>-->
+                        <!--<span>21567</span>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<img src="images/h2.png">-->
+                        <!--<a href="#">舞曲揭秘音乐揭秘...</a>-->
+                        <!--<br>-->
+                        <!--<span>21567</span>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<img src="images/h3.png">-->
+                        <!--<a href="#">舞曲揭秘音乐揭秘...</a>-->
+                        <!--<br>-->
+                        <!--<span>21567</span>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<img src="images/h5.png">-->
+                        <!--<a href="#">舞曲揭秘音乐揭秘...</a>-->
+                        <!--<br>-->
+                        <!--<span>21567</span>-->
+                    <!--</li>-->
                 </ul>
+                    </div>
             </div>
         </div>
     </div>
@@ -390,14 +396,34 @@
         </div>
     </div>
     <div class="background" id="J_background"></div>
-<!--juicer-->
+         <!--右侧视频-->
+         <div class="video" id="J_showVideo">
+                <a href="#" class="video-close" id="J_reMovePlay">x</a>
+                 <h1>请观看下面的视频</h1>
+                 <video class="video-open" controls src="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.mp4" poster="http://o6x2vif88.bkt.clouddn.com/video-play-poster.gif" height="564px" width="887px">
+                     您的浏览器不支持 video 标签。
+                 </video>
+         </div>
+         <div class="background1" ></div>
+         <!--juicer渲染右侧最热排行区-->
+         <script id="hotRank" type="text/template">
+         {@each list as item}
+         <li class="hotRank" id="J_hotRank">
+             <img src="${item.smallPhotoUrl}">
+             <a>${item.name}</a>
+             <br/>
+             <span>${item.learnerCount}</span>
+         </li>
+             {@/each}
+</script>
+        <!--juicer渲染主内容区-->
 <script id="courseTpl" type="text/template">
 {@each list as item}
-<dl>
-    <dt>
-    <img src="${item.middlePhotoUrl}" alt="">
+<dl id="main-left">
+    <dt id="main-left-picture">
+    <img src="${item.middlePhotoUrl}" alt="" width="223" height="124">
     </dt>
-    <dd>
+    <dd id="main-left-content">
         <a href="">${item.name}</a>
         <span class="mousic-style">${item.provider}</span>
         {@if item.price == 0}
@@ -407,6 +433,7 @@
         {@/if}
     </dd>
 </dl>
+    {@/each}
 </script>
 </body>
 

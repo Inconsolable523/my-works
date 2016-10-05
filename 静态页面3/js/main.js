@@ -9,7 +9,7 @@ require.config({
     }
 });
 
-define(['jquery', 'js.cookie', 'jquery.md5','Juicer'], function ($, Cookies) {
+define(['jquery', 'js.cookie','url', 'jquery.md5','Juicer'], function ($, Cookies,API) {
     var index = {
         init: function () {
             index.topbarControl.init();
@@ -17,7 +17,8 @@ define(['jquery', 'js.cookie', 'jquery.md5','Juicer'], function ($, Cookies) {
             index.login.init();
             index.lunbo();
             index.contentSwitch();
-            index._getCorseCard();
+            index.playVideo();
+            index.hotList();
 
         },
         //顶栏不再提示
@@ -75,7 +76,7 @@ define(['jquery', 'js.cookie', 'jquery.md5','Juicer'], function ($, Cookies) {
                 $("#J_login-in").on("click", function () {
                     data.userName = $.md5($('#J_uname').val().trim());
                     data.password = $.md5($('#J_upassword').val());
-                    $.get('http://study.163.com/webDev/login.htm', data, function (a) {
+                    $.get(API.login, data, function (a) {
                         if (a == 1) {
                             //登录成功
 
@@ -96,7 +97,7 @@ define(['jquery', 'js.cookie', 'jquery.md5','Juicer'], function ($, Cookies) {
                 self._close();
             },
             _followed: function () {
-                $.get('http://study.163.com/webDev/attention.htm',function(b){
+                $.get(API.changeFollowState,function(b){
                     if(b==1){
                         //设置关注成功cookie
                         Cookies.set('followSuc', 'true', {expires: 7, path: '/'});
@@ -184,7 +185,6 @@ define(['jquery', 'js.cookie', 'jquery.md5','Juicer'], function ($, Cookies) {
             //点击按钮,实现相应图片跳转
             $btn.bind("click",function(){
                 var getNumber=$(this).attr("J_index");
-                console.log(getNumber);
                 _turnBanner(getNumber);
             })
             //自动播放
@@ -208,19 +208,21 @@ define(['jquery', 'js.cookie', 'jquery.md5','Juicer'], function ($, Cookies) {
         contentSwitch:function(){
                 var $btn1=$("#J_change1");
                 var $btn2=$("#J_change2");
+                var dtd= $.Deferred();
+                index._getCorseCard(1, 20, $btn1.attr('data-type'), dtd);
 
                 $btn1.bind("click",function(){
-                    var dtd= $.Deferred(); //新建异步对象
-                    $.when(index._getCorseCard(0,20,$btn1.attr("data-type"),dtd)).done(function(){
-                        $btn2.removeClass("checked");
-                        $btn1.addClass("checked");
+                    //var dtd= $.Deferred(); //新建异步对象
+                    $.when(index._getCorseCard(1, 20, $btn1.attr('data-type'), dtd)).done(function(){
+                        $btn2.removeClass("check");
+                        $btn1.addClass("check");
                     })
                 });
                 $btn2.bind("click",function(){
-                    var dtd= $.Deferred();
-                    $.when(index._getCorseCard((0,20,$btn2.attr("data-type"),dtd))).done(function(){
-                        $btn1.removeClass("checked");
-                        $btn2.addClass("checked");
+                    //var dtd= $.Deferred();
+                    $.when(index._getCorseCard(1, 20, $btn2.attr('data-type'), dtd)).done(function(){
+                        $btn1.removeClass("check");
+                        $btn2.addClass("check");
                     })
                 })
             },
@@ -231,27 +233,113 @@ define(['jquery', 'js.cookie', 'jquery.md5','Juicer'], function ($, Cookies) {
              * @param type      分类
              * @param dtd       异步对象
              */
-            _getCorseCard:function(pageNo,psize,type,dtd){
-                var param={
-                    pageNo:pageNo,
-                    psize:psize,
-                    type:type
+            _getCorseCard:function(pageNo, psize, type, dtd){
+                var param = {
+                    pageNo: pageNo,
+                    psize: psize,
+                    type: type
                 },
                     $showPicture=$("#J_main-picture");
                 $showPicture.html("内容加载中");
-                $.get('http://study.163.com/webDev/couresByCategory.htm',param,function(rsp){
+                $.get(API.getCoures,param,function(rsp){
                     var tpldata={};//新建对象
                     rsp=JSON.parse(rsp);//JSON.parse()将字符串解析为JSON对象
                     tpldata.list=rsp.list;
 
+
                     $showPicture.html("");
                     var cont= juicer($("#courseTpl").html(),tpldata);
                     $showPicture.html(cont);
+                    index._page(rsp.pagination);//分页
 
+                    dtd.resolve();//改变dtd的执行状态(已完成状态),进而执行done()回调函数
+                });
 
-                })
+                return dtd;
+            },
+        //分页
+        _page:function(data){
+            //页面数字渲染
+            draw();
+            var $prv=$(".prv");
+            var $next=$(".next");
+            var $listNum=$(".list-number");
 
+            $listNum.bind("click",function(){
+                turnTopage($(this).html());
+            })
+            $prv.bind("click",function(){
+                $(".list-number.list-checked").prev().trigger("click");
+            })
+            $next.bind("click",function(){
+                $(".list-number.list-checked").next().trigger("click");
+            })
+
+            //页面数字渲染
+            function draw(){
+                var $list=$("#J_classList"),
+                    tpl;
+
+                $list.html('');
+                for(var i=1;i<=data.totlePageCount;i++){
+                    tpl=$list.html()+'\<a href="#" class="list-number">'+i+'\</a>';
+                    $list.html(tpl);
+                }
+                $list.html(tpl);
+                var $listBtn=$(".list-number");
+                $listBtn.removeClass('list-checked');
+                $listBtn.eq(data.pageIndex).addClass('list-checked');
+
+            };
+            //跳到相应页面
+            function turnTopage(pageNum){
+                var type=$('#J_leftChange a.check').attr('data-type');
+                index._getCorseCard(pageNum,data.pageSize,type);
             }
+
+        },
+        //右侧视频介绍
+        playVideo: function(){
+            $("#J_play").bind("click",function(){
+                $("#J_background").show();
+                $("#J_showVideo").show();
+                reMovePlay();
+                //取消播放
+                function reMovePlay(){
+                   $("#J_reMovePlay").bind("click",function(){
+                       $("#J_showVideo").hide();
+                       $("#J_background").hide();
+                   })
+                }
+            })
+        },
+        //右侧热门推荐
+        hotList:function(){
+            $.get(API.hotList,function(rsp){
+                var tpl={},
+                $hot=$("#J_hot");
+
+                rsp=JSON.parse(rsp);
+                tpl.list=rsp;
+
+                $hot.html('');
+                var data=juicer($("#hotRank").html(),tpl);
+                $hot.html(data);
+                scrol();
+                //轮播滚动(有问题)
+                function scrol(){
+                    var $test=$("#J_hotRank");
+                   var timer =setInterval(function(){
+                       $test.hide();
+                       $test = $test.next();
+                       $test.hide();
+                    },5000);
+
+                }
+            });
+
+
+        }
 
     };
 

@@ -260,7 +260,7 @@ body{
 	&-left{
 		width: 980px;
 		&_change{
-			.checked{
+			.check{
 				background: #4EAB46;
 				color: white;
 			}
@@ -278,15 +278,13 @@ body{
 			span{
 				line-height: 48px;
 			}
-			&:hover{
-				background: #4EAB46;
-				color: white;
-			}
+
 		}
 		}
-		&_class{
-			margin-top:28px;
-			dl{
+		&_class {
+			margin-top: 28px;
+		}
+			#main-left{
 				line-height: 22px;
 				width: 222px;
 				height: 228px;
@@ -296,50 +294,52 @@ body{
 				margin-bottom: 20px;
 				font-size:12px; 
 				font-family: "MicrosoftYaHei",serif,sans-serif;
-				dt{
+				#main-left-picture{
 					height: 125px;
 				}
-				dd{
+				#main-left-content {
 					height: 104px;
 					margin: 6px 10px 0 10px;
-					background:url(../images/number.png) no-repeat 0 48px;
-					a{
+					background: url(../images/number.png) no-repeat 0 48px;
+					a {
 						display: inline-block;
 						width: 210px;
-						text-decoration:none;
-						&:hover{
-							color: #78B672;
+						text-decoration: none;
+						&:hover {
+							color: #78b672;
 						}
 					}
-					span{
+					span {
 						display: block;
-						color: #9F9F9F;
+						color: #9f9f9f;
 					}
-					.checked{
+					.checked {
 						color: red;
-						margin-top:28px;
+						margin-top: 28px;
 					}
 					
 				}
 			}
-		}
+
 		&_class--list{
 			margin-left:656px;
-			a{
-				display: inline-block;
-				text-align: center;
-				line-height: 20px;
-				width: 20px;
-				height: 20px;
-				text-decoration: none;
-				margin-right:5px;
-				color: black;
-				&:hover{
-					background: #8DD2A1;
-					color: white;
-				}
-			}
 		}
+	}
+	//页面数字
+	.list-number{
+		display: inline-block;
+		text-align: center;
+		line-height: 20px;
+		width: 20px;
+		height: 20px;
+		text-decoration: none;
+		margin-right:5px;
+		margin-top: 5px;
+		color: black;
+	}
+	.list-number:hover,.list-checked{
+		//background: #8DD2A1;
+		color: #8DD2A1;
 	}
 	&-right{
 		position:absolute;
@@ -376,49 +376,67 @@ body{
 				}
 			}
 		}
-		&_hot{
-			height:778px;
-			background:white;
-			margin-top:20px;
-			h1{
-				padding-left:18px;
-				height: 56px;
-				border-bottom: 1px solid #E0E0E0;
-				font-size: 16px;
-				line-height: 56px;
-			}
-			ul{
-				list-style: none;
-				font-size: 14px;
-				color: #3B3B3B;
-				border-top: 1px solid #E0E0E0;
-				li{
-					margin-top:20px;
-					padding-left:18px;
-					height: 50px;
-					position:relative;
-					background:url(../images/people.png) no-repeat 84px 26px;
-					a{
-						text-decoration: none;
-						font-size: 14px;
-						color: black;
-						position:absolute;
-						left: 84px;
-					}
-					span{
-						position:absolute;
-						left: 98px;
-						top:26px;
-						color: #9D9D9D;
-						font-size: 14px;
-		
-					}
-				}
-			}
-		}
-
 	}
 }
+//重写右侧最热排行
+.main-right_hot {
+	height: 778px;
+	background: white;
+	margin-top: 20px;
+	position: relative;
+	h1 {
+		padding-left: 18px;
+		height: 56px;
+		border-bottom: 1px solid #e0e0e0;
+		font-size: 16px;
+		line-height: 56px;
+	}
+	ul {
+		list-style: none;
+		font-size: 14px;
+		color: #3b3b3b;
+		border-top: 1px solid #e0e0e0;
+		height: 718px;
+		overflow: hidden;
+		position: absolute;
+		left: 0;
+		top: 56px;
+	}
+}
+	.hotRank{
+		margin-top:20px;
+		padding-left:18px;
+		height: 50px;
+		position:relative;
+		background:url(../images/people.png) no-repeat 84px 29px;
+		a{
+			text-decoration: none;
+			font-size: 14px;
+			color: black;
+			//position:absolute;
+			//left: 82px;
+			width: 123px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: block;
+			margin-top: -55px;
+			margin-left: 65px;
+		}
+		img{
+			width: 50px;
+			height: 50px;
+			object-fit: cover;
+		}
+		span{
+			position:absolute;
+			left: 98px;
+			top:26px;
+			color: #9D9D9D;
+			font-size: 14px;
+
+		}
+	}
 .footer{
 	position:relative;
 	height:262px;
@@ -560,4 +578,32 @@ body{
 	background: #262626;
 	opacity: .5;
 	z-index: 10;
+}
+//视频播放
+.video{
+	display: none;
+	position: fixed;
+	width: 950px;
+	height: 674px;
+	left: 50%;
+	top: 50%;
+	margin-left: -475px;
+	margin-top: -337px;
+	background: white;
+	z-index: 11;
+	color: #333333;
+	a{
+		float: right;
+		margin-right: 12px;
+		margin-top: 8px;
+		font-size: 16px;
+	}
+	h1,video{
+		margin-left: 32px;
+		font-size: 18px;
+	}
+	h1{
+		margin-top: 30px;
+		margin-bottom: 22px;
+	}
 }
