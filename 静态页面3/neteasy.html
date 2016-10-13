@@ -47,9 +47,9 @@
         </nav>
         <div class="header-banner" >
         <ul id="J_banner">
-            <li><a href="http://open.163.com/"><img src="images/banner1.jpg" class="on"></a></li>
-            <li><a href="http://study.163.com/" ><img src="images/banner2.jpg"></a></li>
-            <li><a href="http://www.icourse163.org/" ><img src="images/banner3.jpg"></a></li>
+            <li><a href="http://open.163.com/"><img src="images/banner1.jpg" ></a></li>
+            <li style="display: none;"><a href="http://study.163.com/" ><img src="images/banner2.jpg"></a></li>
+            <li style="display: none;"><a href="http://www.icourse163.org/" ><img src="images/banner3.jpg"></a></li>
         </ul>
             <div class="header-banner_btn" id="J_btn">
                 <span J_index="0" class="on"></span>
@@ -408,7 +408,7 @@
          <!--juicer渲染右侧最热排行区-->
          <script id="hotRank" type="text/template">
          {@each list as item}
-         <li class="hotRank" id="J_hotRank">
+         <li class="hotRank J_hotRank">
              <img src="${item.smallPhotoUrl}">
              <a>${item.name}</a>
              <br/>

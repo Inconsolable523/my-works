@@ -125,14 +125,13 @@ body{
 	height: 460px;
 	position: relative;
 	ul{
-		width: 4956px;
 		position: absolute;
 		left: 0;
 		z-index: 1;
-
 	}
 	li{
-		float: left;
+		position: absolute;
+		left:0;
 	}
 	//增添
 	//img{
