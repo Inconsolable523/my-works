@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>布局解决方案</title>
+	<style type="text/css">
+		.parent{
+			background-color: yellow;
+		}
+		.child{
+			background-color: red;
+		}
+		/*inline-block+text-align*/
+		/*.parent{
+           text-align: center;
+		}
+		.child{
+			display: inline-block;
+		}*/
+
+		/*table+margin*/
+		/*.child{
+			display: table;
+			margin:0 auto;
+		}*/
+		
+		/*flex+margin*/
+		/*.parent{
+			display:flex;
+		}
+		.child{
+			margin:0 auto;
+		}*/
+
+		/*absolute+transform*/
+		/*.parent{
+			/*没有高度，所以无法显示背景颜色*/
+			/*
+			position: relative;
+		}
+		.child{
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+		}*/
+
+		/*flex+justify-content*/
+		/*.parent{
+			display: flex;
+			justify-content: center;
+		}*/
+
+		
+	</style>
+</head>
+<body>
+<!-- 里面和外面的容器宽度不固定之水平居中 -->
+<div class="parent">
+	<div class="child">demo</div>
+</div>
+
+</body>
+</html>
