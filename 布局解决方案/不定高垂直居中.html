@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>垂直居中(高度不定)</title>
+</head>
+<style type="text/css">
+	.parent{
+		background-color: yellow;
+		/*为了显示效果，避免被里面的元素覆盖，height也可以设置任意值*/
+		height: 300px;
+	}
+	.child{
+		background-color: red;
+	}
+
+	/*table-cell+vertical-align*/
+	/*.parent{
+		display: table-cell;
+		vertical-align:middle;
+	}*/
+
+	/*absolute+transform*/
+	/*.parent{
+		position: relative;
+	}
+	.child{
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}*/
+
+	/*flex+align-items*/
+	.parent{
+		display: flex;
+		align-items: center;
+	}
+</style>
+<body>
+<div class="parent">
+	<div class="child">DEMO</div>
+</div>
+</body>
+</html>
