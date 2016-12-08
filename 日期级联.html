@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>日期级联</title>
+</head>
+
+<body>
+    <select name="year" id="year">
+        <option value="0">--</option>
+        <option value="1999">1999</option>
+        <option value="2000">2000</option>
+        <option value="2001">2001</option>
+    </select>年
+    <select name="month" id="month">
+        <option value="0">--</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+    </select>月
+    <select name="date" id="date">
+        <option value="0">--</option>
+    </select>日
+    <script type="text/javascript">
+     function addEvent(node,event,handler){
+     	// 浏览器兼容
+            if (!!node.addEventListener){
+                node.addEventListener(event,handler,!1);
+            }else{
+                node.attachEvent('on'+event,handler);
+            }
+        }
+    addEvent(window, 'load', function() {
+    	// 获取元素
+    	function $(a){
+    		return document.getElementById(a);
+    	}
+        var oYear = $('year');
+        var oMonth = $('month');
+        var oDate = $('date');
+        //根据年月获取天数
+        function getDays(year, month) {
+            return new Date(year, month, 0).getDate();
+        }
+
+        function fillDays(obj, index) {
+            if (obj.options[index].selected) {
+                oDate.options.length = 1;
+                if (index == 0) {
+                    if (obj.id == 'year') {
+                        oMonth.options[0].selected = true;
+                    }
+                    return;
+                }
+                // 初始状态
+
+                var year = oYear.options[oYear.selectedIndex].value;
+                if (year == 0) return;
+                var month = oMonth.options[oMonth.selectedIndex].value;
+                if (month == 0) return;
+
+                // 填充
+                var date = getDays(year, month);
+                for (var i = 1; i <= date; i++) {
+                    var opt = document.createElement('option');
+                    opt.appendChild(document.createTextNode('' + i));
+                    opt.setAttribute('value', '' + i);
+                    oDate.appendChild(opt);
+                }
+            }
+        }
+        addEvent(oYear, 'change', function() {
+            for (var i = 0; i <= 3; i++) {
+                fillDays(this, i);
+            }
+        });
+        addEvent(oMonth, 'change', function() {
+            for (var i = 0; i <= 12; i++) {
+                fillDays(this, i);
+            }
+        });
+
+    });
+    </script>
+</body>
+
+</html>
