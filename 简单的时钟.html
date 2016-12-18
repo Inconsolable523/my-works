@@ -1,0 +1,41 @@
+<!--
+ --   Created by zhichao on 2016/12/18.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload=function(){
+            var t= document.getElementById('txt');
+            function starCount(){
+                var f=new Date();
+                var h= f.getHours();
+                var m= f.getMinutes();
+                var s= f.getSeconds();
+                h=zero(h);
+                m=zero(m);
+                s=zero(s);
+
+               t.innerHTML=h+':'+m+':'+s;
+                setTimeout(starCount,500);
+
+            }
+            function zero(a){
+                if(a<10){
+                    return ("0"+a);
+                }
+                return a;
+            }
+            starCount();
+
+        }
+    </script>
+</head>
+<body>
+<div id="txt"></div>
+
+</body>
+</html>

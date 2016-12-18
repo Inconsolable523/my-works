@@ -1,0 +1,38 @@
+<!--
+ --   Created by zhichao on 2016/12/18.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>简单的计时器</title>
+    <script type="text/javascript">
+        window.onload=function(){
+            var s=document.getElementById('start');
+            var c=document.getElementById('count');
+            var e=document.getElementById('end');
+            var num=0;
+            var t;
+
+            function timestart(){
+                c.value=num;
+                num=num+1;
+                t=setTimeout(timestart, 1000);
+            }
+            function timeend(){
+                clearTimeout(t);
+            }
+            s.onclick=timestart;
+            e.onclick=timeend;
+        }
+    </script>
+
+</head>
+<body>
+<input type="button" value="开始" id="start">
+<input type="text" name="" id ="count">
+<input type="button" value="结束" id="end">
+
+</body>
+</html>
